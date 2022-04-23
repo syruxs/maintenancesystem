@@ -1,12 +1,13 @@
 <?php
 $user=$_POST['user'];
-$pass=$_POST['pass'];
+$pass=sha1($_POST['pass']);
+
 session_start();
 $_SESSION['user']=$user;
 
-include("conex.php");
+require("admin/conex.php");
 
-$consulta="SELECT*FROM user where user='$user' and pass='$pass'";
+$consulta="SELECT*FROM user where user='$user' and pass='$pass' and estado='ACTIVO'";
 $result=mysqli_query($conn,$consulta);
 
 $filas=mysqli_num_rows($result);
