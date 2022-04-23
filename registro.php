@@ -34,10 +34,10 @@
             <a class="nav-link" aria-current="page" href="contacto.php">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  active" aria-current="page" href="login.php">Ingresar</a>
+            <a class="nav-link" aria-current="page" href="login.php">Ingresar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="registro.php">Registrase</a>
+            <a class="nav-link active" aria-current="page" href="#">Registrase</a>
           </li>
         </ul>
         <form class="d-flex">

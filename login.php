@@ -15,7 +15,11 @@
         <meta name="theme-color" content="#ffffff">
         <!--nav-->
         <link href="css/bootstrap.min.css" rel="stylesheet"> 
-    <title>Sistema de Mantenimiento</title> 
+        <!--hojas de etilos-->
+        <link href="css/stylelogin.css" rel="stylesheet">
+        <!--link para efectos-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+      <title>Sistema de Mantenimiento</title> 
     </head>
 <body>
 <header>
@@ -48,6 +52,22 @@
     </div>
   </nav>
 </header>
+<main>
+<form action="validar.php" method="post" class="formulario">
+
+<h1 class="animate__animated animate__backInLeft">Sistema de login</h1>
+
+<p>Usuario <input autofocus type="text" placeholder="ingrese su nombre" name="usuario"></p>
+
+<p>Contraseña <input type="password" placeholder="ingrese su contraseña" name="contraseña"></p>
+
+<input type="submit" value="Ingresar">
+
+</form>
+</main>
+<?php
+echo array_pop(explode('/', $_SERVER['PHP_SELF']));
+?>
 <!--Permite que se desplegue el Menu-->
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>

@@ -31,10 +31,10 @@
             <a class="nav-link" aria-current="page" href="index.html">home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="contacto.php">Contacto</a>
+            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  active" aria-current="page" href="login.php">Ingresar</a>
+            <a class="nav-link" aria-current="page" href="login.php">Ingresar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="registro.php">Registrase</a>
