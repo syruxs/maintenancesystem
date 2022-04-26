@@ -13,12 +13,19 @@
         <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <!--nav-->
-        <link href="css/bootstrap.min.css" rel="stylesheet"> 
         <!--hojas de etilos-->
         <link href="css/stylelogin.css" rel="stylesheet">
         <!--link para efectos-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+        <!--Para mostrar contraseña-->
+        <script src="js/mostrarPassword.js"></script>
+        <!--Carga el ojo-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--cuadra el ojo y nav-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--hace que cambie el ojo-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
       <title>Sistema de Mantenimiento</title> 
     </head>
 <body>
@@ -44,10 +51,6 @@
             <a class="nav-link" aria-current="page" href="registro.php">Registrase</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -56,18 +59,19 @@
 <form action="validaruser.php" method="post" class="formulario">
 
 <h1 class="animate__animated animate__backInLeft">Sistema de login</h1>
-
-<p>Usuario <input autofocus type="text" placeholder="ingrese su nombre" name="user" style="text-transform:lowercase;" onkeyup="javascript:this.value=this.value.lowercase();"></p>
-
-<p>Contraseña <input type="password" placeholder="ingrese su contraseña" name="pass"></p>
-
+ <p><input autofocus type="text" placeholder="Ingrese su usuario" Class="form-control" name="user" style="text-transform:lowercase;" onkeyup="javascript:this.value=this.value.lowercase();" title="Ingrese su usuario"></p>
+  <div class="input-group">
+    <p><input ID="txtPassword" type="Password" Class="form-control"  placeholder="Ingrese su contraseña" name="pass" title="Ingrese su contraseña"></p>
+      <div class="input-group-append">
+        <p><button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> 
+          <span class="fa fa-eye-slash icon"></span> 
+        </button></p>
+      </div>
+  </div>
 <input type="submit" value="Ingresar">
 
 </form>
 </main>
-<?php
-echo array_pop(explode('/', $_SERVER['PHP_SELF']));
-?>
 <!--Permite que se desplegue el Menu-->
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>

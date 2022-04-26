@@ -25,5 +25,5 @@ if($filas){
     <?php
      echo "<script type=\"text/javascript\">alert(\"Existe un error en la autentificacion\");</script>";
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+mysqli_free_result($result);
+mysqli_close($conn);
