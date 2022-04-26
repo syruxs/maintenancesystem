@@ -1,7 +1,6 @@
 * {
 	padding: 0;
 	margin: 0;
-	font-family: century gothic;
 }
 body{
     background-image: url(../img/FondoLogin.jpg);
@@ -22,7 +21,7 @@ body{
 
 }
 input {
-	width: calc(100% - 20px);
+	width: calc(100% - 10px);
 	padding: 9px;
 	margin: auto;
 	margin-top: 12px;

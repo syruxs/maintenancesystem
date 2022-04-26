@@ -14,7 +14,9 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!--nav-->
-        <link href="css/bootstrap.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--hojas de etilos-->
+        <link href="css/styleregistros.css" rel="stylesheet">
     <title>Sistema de Mantenimiento</title> 
     </head>
 <body>
@@ -40,10 +42,6 @@
             <a class="nav-link active" aria-current="page" href="#">Registrase</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
