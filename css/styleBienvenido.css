@@ -1,0 +1,14 @@
+body{
+    background-image: url(../img/FondoRegistro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.mensaje{
+    background-color: aliceblue;
+    margin: auto;
+    padding: 50px;
+    border: solid 2px blueviolet;
+    width: 500px;
+}
