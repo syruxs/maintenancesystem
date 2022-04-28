@@ -28,6 +28,16 @@ $Sql_user=mysqli_query($conn,"SELECT * FROM  user where user='$ver'");
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <!--hojas de etilos-->
         <link href="css/styleBienvenido.css" rel="stylesheet">
+        <!--link para efectos-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+        <!--Redireccionar-->
+        <script type="text/javascript">
+            setTimeout(function() => {
+                window.location.replace(http://localhost:3000/root/principal.php;
+     
+            }, 5000);
+
+        </script>
         <title>Bienvenido <?php 
         echo "".$ver."";
         
@@ -36,7 +46,11 @@ $Sql_user=mysqli_query($conn,"SELECT * FROM  user where user='$ver'");
     </head>
 <body>
 <div class="mensaje">
-
+        <?php
+        echo "<p class='animate__animated animate__backInLeft'> Bienvenido <br> ".$nombre. " 
+        </p>";
+        
+        ?>
 </div>
 </body>
 </htnl>
