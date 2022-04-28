@@ -14,7 +14,8 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!--nav-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
         <!--hojas de etilos-->
         <link href="css/styleregistros.css" rel="stylesheet">
         <!--link para efectos-->

@@ -2,13 +2,14 @@
 session_start();
 date_default_timezone_set('America/Santiago');
 $ver=$_SESSION['user'];
+/*
 $s=explode(',',$ver);
 	if($s[0]!=""){
 	}	else{
 		header("Location:../index.php");
 		exit;
 	}
-
+*/
     require("admin/conex.php");
 
 $Sql_user=mysqli_query($conn,"SELECT * FROM  user where user='$ver'");
@@ -42,15 +43,39 @@ $Sql_user=mysqli_query($conn,"SELECT * FROM  user where user='$ver'");
         echo "".$ver."";
         
         ?></title>
+      <style>
+        p#nombre {text-transform:capitalize;}
+        .formulario__btn {
+            background-color: #48e;
+	        color: #fff;
+	        width: calc(80% - 20px);
+	        margin: 0 10%;
+	        margin-top: 22px;
+	        border: none;
+            height: 50px;
+        }
 
+        .formulario__btn:hover {
+            box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+        }
+      </style>
     </head>
 <body>
 <div class="mensaje">
         <?php
-        echo "<p class='animate__animated animate__backInLeft'> Bienvenido <br> ".$nombre. " 
-        </p>";
+        echo "<p class='animate__animated animate__backInLeft' id='nombre'> Bienvenido <br> ".$nombre. " <br><br>
+        </p>
+        Tu registro ha sido procesado de forma exitosa, haz clic en el boton ingresar para acceder a tu sitio.";
         
         ?>
+        <br>
+        
+    <button type="submit" class="formulario__btn" onclick="location.href='http://localhost:3000/login.php'">Ingresar</button>
 </div>
 </body>
+<?php
+/*if(isset($_SESSION['user'])) {
+	unset($_SESSION['user']);
+}*/
+?>
 </htnl>

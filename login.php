@@ -22,9 +22,12 @@
         <!--Carga el ojo-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--cuadra el ojo y nav-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <!--hace que cambie el ojo-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--Validar formulario antes de ser enviado-->
+        <script src="js/validarLoginCampos.js"></script>
 
       <title>Sistema de Mantenimiento</title> 
     </head>
@@ -57,19 +60,17 @@
 </header>
 <main>
 <form action="validaruser.php" method="post" class="formulario">
-
-<h1 class="animate__animated animate__backInLeft">Sistema de login</h1>
- <p><input autofocus type="text" placeholder="Ingrese su usuario" Class="form-control" name="user" style="text-transform:lowercase;" onkeyup="javascript:this.value=this.value.lowercase();" title="Ingrese su usuario"></p>
-  <div class="input-group">
-    <p><input ID="txtPassword" type="Password" Class="form-control"  placeholder="Ingrese su contraseña" name="pass" title="Ingrese su contraseña"></p>
-      <div class="input-group-append">
-        <p><button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> 
-          <span class="fa fa-eye-slash icon"></span> 
-        </button></p>
+  <h1 class="animate__animated animate__backInLeft">Sistema de login</h1>
+    <p><input autofocus type="text" placeholder="Ingrese su usuario" Class="form-control" name="user" id="user" style="text-transform:lowercase;" onkeyup="javascript:this.value=this.value.lowercase();" title="Ingrese su usuario"></p>
+      <div class="input-group">
+        <p><input ID="txtPassword" type="Password" Class="form-control"  placeholder="Ingrese su contraseña" name="pass" title="Ingrese su contraseña"></p>
+          <div class="input-group-append">
+            <p><button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> 
+              <span class="fa fa-eye-slash icon"></span> 
+            </button></p>
+          </div>
       </div>
-  </div>
-<input type="submit" value="Ingresar">
-
+    <input type="submit" value="Ingresar">
 </form>
 </main>
 <!--Permite que se desplegue el Menu-->

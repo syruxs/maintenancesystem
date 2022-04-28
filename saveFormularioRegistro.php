@@ -24,8 +24,10 @@ if(mysqli_num_rows($result)!=0){
 }else{
 
 $table_save = "INSERT INTO `user` (`user`, `pass`, `nombre`, `correo`, `fono`, `perfil`, `estado`, `ip`, `date`) VALUES ('$user', '$pass', '$name', '$email', '$fono', '$perfil', '$estado', '$ip', '$date')"; 
-    
+
+session_start();
 $_SESSION['user'] = $user;
+
 $insert=mysqli_query($conn, $table_save);
         if(!$insert){
             echo mysql_error()."Error !!";
@@ -35,7 +37,6 @@ $insert=mysqli_query($conn, $table_save);
        }
    
 }
-
 //mysqli_free_result($result);
 //mysqli_close($conn);
 ?>

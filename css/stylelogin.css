@@ -38,6 +38,9 @@ input[type='submit']{
 	border: none;
 	
 }
+input[type='submit']:hover{
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
 form h1 {
 	text-align: center;
 	padding: 12px;
