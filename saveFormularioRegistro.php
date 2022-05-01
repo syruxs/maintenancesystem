@@ -1,6 +1,6 @@
 <?php
 // Desactivar toda las notificaciónes del PHP
-//error_reporting(0);
+error_reporting(0);
 
 $user=$_POST['usuario'];
 $pass=sha1($_POST['password']);
@@ -37,6 +37,6 @@ $insert=mysqli_query($conn, $table_save);
        }
    
 }
-//mysqli_free_result($result);
-//mysqli_close($conn);
+mysqli_free_result($result);
+mysqli_close($conn);
 ?>

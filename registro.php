@@ -22,9 +22,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
     <title>Sistema de Mantenimiento</title> 
-      <style>
-        input#nombre {text-transform:capitalize;}
-      </style>
+	<style>
+      input.formulario__input {text-transform:capitalize;}
+  	</style>
     </head>
 <body>
 <header>
@@ -71,7 +71,7 @@
 			<div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Nombre</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" placeholder="Ingrese su nombre" name="nombre" id="nombre" >
+					<input type="text" class="formulario__input" placeholder="Ingrese su nombre" name="nombre" id="nombre">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El nombre tiene que ser de 4 a 50 dígitos y solo puede letras.</p>
@@ -111,7 +111,7 @@
 			<div class="formulario__grupo" id="grupo__telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="+56912345678">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="56912345678">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
