@@ -65,12 +65,13 @@ $Sql_user=mysqli_query($conn,"SELECT * FROM  user where user='$ver'");
         <?php
         echo "<p class='animate__animated animate__backInLeft' id='nombre'> Bienvenido <br> ".$nombre. " <br><br>
         </p>
-        Tu registro ha sido procesado de forma exitosa, haz clic en el boton ingresar para acceder a tu sitio.";
+        Tu registro ha sido procesado de forma exitosa, haz clic en el boton ingresar para acceder a tu sitio. o haz clic en el boton crear para registrar tus vehiculos.";
         
         ?>
         <br>
         
     <button type="submit" class="formulario__btn" onclick="location.href='http://localhost:3000/login.php'">Ingresar</button>
+    <button type="submit" class="formulario__btn" onclick="location.href='http://localhost:3000/crearvehiculo.php'">Crear Vehiculo</button>
 </div>
 </body>
 <?php

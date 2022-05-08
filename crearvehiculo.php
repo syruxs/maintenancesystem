@@ -2,23 +2,24 @@
 session_start();
 date_default_timezone_set('America/Santiago');
 $ver=$_SESSION['user'];
-
+/*
 $s=explode(',',$ver);
 	if($s[0]!=""){
-
-        $menu_session ="
-        <li class='nav-item'>
-        <a class='nav-link active' aria-current='page' href='#'>Registrase</a>
-      </li>
-        ";
-	}	
-    else{
+	}	else{
 		header("Location:../index.php");
 		exit;
 	}
+*/
+    require("admin/conex.php");
+    require("select.php");
 
-    require("../admin/conex.php");
+$Sql_user=mysqli_query($conn,"SELECT * FROM  user where user='$ver'");
 
+    while($rst_Sql_name=mysqli_fetch_array($Sql_user)){
+            $nombre=$rst_Sql_name['nombre'];
+		}
+    
+       
 ?>
 <!doctype html>
 <html lang="es">
@@ -26,22 +27,26 @@ $s=explode(',',$ver);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <meta name="author" content="Daniel Ugalde Ugalde">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <!--favicon-->
-        <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-        <link rel="manifest" href="../img/site.webmanifest">
-        <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/site.webmanifest">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!--nav-->
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
         <!--hojas de etilos-->
-        <link href="css/stylePrincial.css" rel="stylesheet">
-    <title>
-        ::: Menu Principal :::
-    </title>
+        <link href="css/styleregistrovehiculos.css" rel="stylesheet">
+        <!--link para efectos-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+        <!--cargar los select-->
+        <script src="js/select.js"></script>
+        <!--hace jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Crear Vehiculo</title> 
     </head>
 <body>
 <header>
@@ -70,7 +75,18 @@ $s=explode(',',$ver);
     </div>
   </nav>
 </header>
+<main>
+    <div class="contenedor_registro_vehiculos">
+        <form>
+            <h1 class="animate__animated animate__backInLeft">Registro de Vehículos</h1>
+            <p>Seleccionar Marca: </p>
+            <select class="custom-select form-control" id="marca">
+
+            </select> 
+           </form>
+    </div>
+</main>
 <!--Permite que se desplegue el Menu-->
-<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
